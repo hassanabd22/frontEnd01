@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 95vh;
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.container {
+    display: flex;
+    width: 70%;
+    height: 60%;
+}
+
+.box {
+    flex-basis: 50%;
+    background-color: hsl(244, 38%, 16%);
+    padding: 6% 10% 6% 5%;
+}
+
+.img {
+        flex-basis: 50%;
+        background-image: url(../images/image-header-desktop.jpg);
+        background-size: cover;
+        position: relative;
+    }
+
+    
+
+.img::before{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: hsl(277, 64%, 61%,0.5);
+}
+
+.box h2 {
+    font-size: 30px;
+    margin-bottom: 1.6rem;
+}
+
+.box h2, h4 {
+    color: hsl(0, 0%, 100%);
+}
+
+.box h2 span{
+    color: hsl(277, 64%, 61%);
+}
+
+.box p{
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.8;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.box >div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.box .num:last-child {
+    margin-right: 10%;
+}
+@media (max-width: 767px) {
+    body {
+        height: 750px;
+        padding-top: 30px;
+    }
+    .container {
+        flex-direction: column;
+        height: 90%;
+        width: 90%;
+        border-radius: 10px 0 5px 0;
+       
+    }
+    .img {
+        background-image: url(../images/image-header-mobile.jpg);
+        background-size: cover;
+        position: relative;
+        flex-basis: 30%;
+        border-radius: 5px  5px 0 0;
+    }
+    }
+
+@media (max-width: 767px) {
+    .box {
+        order: 2;
+        text-align: center;
+        padding: 0;
+    }
+    .num{
+        flex-direction: column;
+    }
+    .box h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        font-weight: 700;
+        line-height: 1.4;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .box p{
+        font-size: 10px;
+        font-weight: normal;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .num >div {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        margin-top: 0;
+    }
+    .box >div{
+      
+        margin-top: 1rem;
+    }
+
+
+}
